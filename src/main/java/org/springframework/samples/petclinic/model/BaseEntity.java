@@ -30,7 +30,7 @@ import javax.persistence.MappedSuperclass;
  * @author Juergen Hoeller
  */
 @MappedSuperclass
-public class BaseEntity implements Serializable {
+public class BaseEntity implements Serializable, Cloneable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -47,4 +47,9 @@ public class BaseEntity implements Serializable {
         return this.id == null;
     }
 
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        super.clone();
+        return null;
+    }
 }
