@@ -30,7 +30,7 @@ import javax.persistence.MappedSuperclass;
 public class NamedEntity extends BaseEntity {
 
     @Column(name = "name")
-    private String name;
+    private String na\me;
 
     public String getName() {
         return this.name;
