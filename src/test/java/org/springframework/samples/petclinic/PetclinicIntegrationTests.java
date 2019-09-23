@@ -16,10 +16,8 @@
 
 package org.springframework.samples.petclinic;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.samples.petclinic.vet.VetRepository;
@@ -34,7 +32,6 @@ public class PetclinicIntegrationTests {
 
     @Test
     public void testFindAll() throws Exception {
-        Assert.assertTrue(false);
         vets.findAll();
         vets.findAll(); // served from cache
     }
